@@ -1,0 +1,51 @@
+{
+	"name": "go-to-jest-spec",
+	"displayName": "Go to Jest Spec",
+	"description": "Switch between code and specs",
+	"version": "0.0.1",
+	"publisher": "dave_hellsmith",
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.jestGoToSpec"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.jestGoToSpec",
+				"title": "Jest Go to Spec"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.jestGoToSpec",
+				"key": "ctrl+shift+t",
+				"mac": "cmd+shift+t",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"dependencies": {
+		"mkdirp": "^0.5.1"
+	},
+	"devDependencies": {
+		"ava": "^0.14.0",
+		"typescript": "^1.8.5",
+		"vscode": "^0.11.12"
+	},
+	"__metadata": {
+		"id": "",
+		"publisherDisplayName": "",
+		"publisherId": ""
+	}
+}
